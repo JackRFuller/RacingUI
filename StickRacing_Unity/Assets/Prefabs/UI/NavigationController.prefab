@@ -43,10 +43,11 @@ MonoBehaviour:
   - {fileID: 154146, guid: ed29cc5e8250f44beb78187e9d76a868, type: 2}
   - {fileID: 198092, guid: ed142fb3e657b4df1a15e67adea512a9, type: 2}
   - {fileID: 173572, guid: 6143fa07b1e0d44e189788cf91ebc1b4, type: 2}
+  - {fileID: 105040, guid: d96284c5d72db4fac8ef6250b145859b, type: 2}
+  - {fileID: 169796, guid: 9863f1e43656e4c2fbdd56f2165ccd04, type: 2}
   - {fileID: 0}
+  loadedScreens:
   - {fileID: 0}
-  - {fileID: 0}
-  loadedScreens: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
