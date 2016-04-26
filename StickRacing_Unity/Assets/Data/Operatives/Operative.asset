@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Name: Operative
   m_EditorClassIdentifier: 
   m_operativeName: Tim
-  m_cost: 1000
+  m_cost: 0
+  creditsChance: 0
+  fuelChance: 30
+  collectibleChance: 60
+  carUpgradeChance: 90
+  boosterChance: 100
+  inventoryChances: []

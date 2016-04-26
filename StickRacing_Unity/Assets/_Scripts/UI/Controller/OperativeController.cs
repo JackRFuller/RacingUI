@@ -1,12 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OperativeController : MonoBehaviour {
+public class OperativeController : MonoBehaviour
+{
+    public static OperativeController instance;
 
-	[SerializeField] private GameObject operativePopup;
+
+	[SerializeField] private GameObject operativePopup;    
 
     [Header("Operative Data")]
-    [SerializeField] private C_Operatives[] operativeData;
+    public C_Operatives[] operativeData;
+
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+    }
 
     public void OnClick_LoadInPopup(int _operativeID)
     {

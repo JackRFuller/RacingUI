@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77a49d4897a8c842afd2d13bbb2d83e, type: 3}
   m_Name: Project 2
   m_EditorClassIdentifier: 
-  m_projectName: 
+  m_projectName: B
   hasCompleted: 0
   m_hasUnlockedPiece: 00000000000000000000

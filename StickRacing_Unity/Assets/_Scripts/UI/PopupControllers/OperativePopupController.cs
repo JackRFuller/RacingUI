@@ -5,6 +5,7 @@ using System.Collections;
 public class OperativePopupController : MonoBehaviour
 {
     public static C_Operatives operative;
+    [SerializeField] private GameObject operativeGenerator;
 
     [Header("UI Elements")]
     [SerializeField] private Text costText;
@@ -33,7 +34,12 @@ public class OperativePopupController : MonoBehaviour
     {
         if(C_PlayerData.m_PlayerCash >= cost)
         {
-            C_PlayerData.m_PlayerCash -= cost;            
+            C_PlayerData.m_PlayerCash -= cost;
+
+            if (OperativeItemGeneratorController.instance == null)
+                Instantiate(operativeGenerator);
+
+            OperativeItemGeneratorController.instance.StartItemGeneration(operative);          
         }
         else
         {
