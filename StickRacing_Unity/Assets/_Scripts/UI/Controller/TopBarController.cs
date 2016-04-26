@@ -57,4 +57,9 @@ public class TopBarController : MonoBehaviour
 		}
 	}
 
+    public void TravelBack()
+    {
+        NavigationController.instance.NavigateToPreviousScreen();
+    }
+
 }

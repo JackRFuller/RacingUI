@@ -7,9 +7,11 @@ public class NavigationController : MonoBehaviour
 	public static NavigationController instance;
 
 	[SerializeField] private GameObject[] navScreens;
-	[HideInInspector] public List<GameObject> loadedScreens = new List<GameObject>();
+	[HideInInspector] public List<GameObject> loadedScreens;
 	private GameObject previousScreen;
 	private GameObject currentScreen;
+    private List<GameObject> traveledScreens;
+    private int travelScreenID = 0;
 
 
 	void Awake()
@@ -27,13 +29,19 @@ public class NavigationController : MonoBehaviour
 
 	void Init()
 	{
-		currentScreen = MainHubController.instance.gameObject;
+        loadedScreens = new List<GameObject>();
+        traveledScreens = new List<GameObject>();
+
+        currentScreen = MainHubController.instance.gameObject;
+        traveledScreens.Add(currentScreen);      
+        
 	}
 
 	public void OnClickNavigateTo(string _target)
 	{
 		
 		bool _hasScreen = false;
+
 
 		for(int i = 0; i < loadedScreens.Count; i++)
 		{
@@ -62,21 +70,31 @@ public class NavigationController : MonoBehaviour
 				SetNewActiveScreen(_newScreen);
 				break;
 			}
-				
-			
 		}
 			
 	}
 
 	void SetNewActiveScreen(GameObject _newActiveScreen)
 	{
-		currentScreen.SetActive(false);
-		previousScreen = currentScreen;
-		currentScreen = _newActiveScreen;
+        currentScreen.SetActive(false);        
+        currentScreen = _newActiveScreen;
+        traveledScreens.Add(currentScreen);
+        travelScreenID++;
+        Debug.Log(currentScreen.name);
 	}
 
 	public void NavigateToPreviousScreen()
 	{
-		SetNewActiveScreen(previousScreen);
+        if(traveledScreens.Count >= 1)
+        {
+            traveledScreens[travelScreenID].SetActive(false);
+            traveledScreens.Remove(currentScreen);
+            travelScreenID--;
+            traveledScreens[travelScreenID].SetActive(true);
+            currentScreen = traveledScreens[travelScreenID];
+        }       
+
+        
+
 	}
 }

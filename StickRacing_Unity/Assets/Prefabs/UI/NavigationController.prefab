@@ -45,7 +45,7 @@ MonoBehaviour:
   - {fileID: 173572, guid: 6143fa07b1e0d44e189788cf91ebc1b4, type: 2}
   - {fileID: 105040, guid: d96284c5d72db4fac8ef6250b145859b, type: 2}
   - {fileID: 169796, guid: 9863f1e43656e4c2fbdd56f2165ccd04, type: 2}
-  - {fileID: 0}
+  - {fileID: 155080, guid: cc6e477ac58ff4f419e044c1ceaafcd8, type: 2}
   loadedScreens:
   - {fileID: 0}
 --- !u!1001 &100100000
