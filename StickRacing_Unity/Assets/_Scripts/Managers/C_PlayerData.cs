@@ -15,6 +15,8 @@ public class C_PlayerData : MonoBehaviour
 
 	public C_CarClasses[] carClasses = new C_CarClasses[4];
 
+    public C_Collectibles[] projects = new C_Collectibles[10];
+
 	void Awake()
 	{
 		if(instance == null)

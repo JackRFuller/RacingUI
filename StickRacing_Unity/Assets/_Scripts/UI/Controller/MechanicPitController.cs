@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class CarClassesController : MonoBehaviour {
+public class MechanicPitController : MonoBehaviour {
 
 	[Header("Upgrade Data")]
 	[SerializeField] private C_CarUpgrades[] upgradeData;

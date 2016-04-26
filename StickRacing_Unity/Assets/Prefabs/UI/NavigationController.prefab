@@ -42,10 +42,12 @@ MonoBehaviour:
   navScreens:
   - {fileID: 154146, guid: ed29cc5e8250f44beb78187e9d76a868, type: 2}
   - {fileID: 198092, guid: ed142fb3e657b4df1a15e67adea512a9, type: 2}
-  - {fileID: 173572, guid: 6143fa07b1e0d44e189788cf91ebc1b4, type: 2}
+  - {fileID: 159660, guid: d746d87c3756b304b906df9355e9f639, type: 2}
   - {fileID: 105040, guid: d96284c5d72db4fac8ef6250b145859b, type: 2}
   - {fileID: 169796, guid: 9863f1e43656e4c2fbdd56f2165ccd04, type: 2}
   - {fileID: 155080, guid: cc6e477ac58ff4f419e044c1ceaafcd8, type: 2}
+  - {fileID: 126840, guid: 11e152d91f5121949b08ffbe39197c4e, type: 2}
+  - {fileID: 169336, guid: dab76a150e30a1141a569b1763a79ac1, type: 2}
   loadedScreens:
   - {fileID: 0}
 --- !u!1001 &100100000

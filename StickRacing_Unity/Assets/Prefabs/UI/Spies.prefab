@@ -29,6 +29,7 @@ GameObject:
   - 223: {fileID: 22340388}
   - 114: {fileID: 11465808}
   - 114: {fileID: 11471926}
+  - 114: {fileID: 11458364}
   m_Layer: 5
   m_Name: Spies
   m_TagString: Untagged
@@ -91,9 +92,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11478370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11458364}
+        m_MethodName: OnClick_LoadInPopup
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &11458364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a55efece21c5944a3fed7579ebf0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  operativePopup: {fileID: 112094, guid: df79d3164a9c25c4781f4231c4fcbf99, type: 2}
+  operativeData:
+  - {fileID: 11400000, guid: e5fff7968c4a7f748bd7d2ee348ef424, type: 2}
 --- !u!114 &11465808
 MonoBehaviour:
   m_ObjectHideFlags: 1
