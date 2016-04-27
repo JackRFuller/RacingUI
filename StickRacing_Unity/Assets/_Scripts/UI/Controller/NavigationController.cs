@@ -33,19 +33,17 @@ public class NavigationController : MonoBehaviour
         traveledScreens = new List<GameObject>();
 
         currentScreen = MainHubController.instance.gameObject;
+        loadedScreens.Add(currentScreen);
         traveledScreens.Add(currentScreen);      
         
 	}
 
 	public void OnClickNavigateTo(string _target)
-	{
-		
+	{        
 		bool _hasScreen = false;
-
-
 		for(int i = 0; i < loadedScreens.Count; i++)
 		{
-			if(loadedScreens[i].name == _target)
+			if(loadedScreens[i].name == _target + "(Clone)")
 			{
 				SetNewActiveScreen(loadedScreens[i]);
 				_hasScreen = true;
@@ -65,7 +63,7 @@ public class NavigationController : MonoBehaviour
 		{
 			if(navScreens[i].name == _target)
 			{
-				GameObject _newScreen = Instantiate(navScreens[i]);
+				GameObject _newScreen = Instantiate(navScreens[i]);               
 				loadedScreens.Add(_newScreen);
 				SetNewActiveScreen(_newScreen);
 				break;
@@ -78,9 +76,9 @@ public class NavigationController : MonoBehaviour
 	{
         currentScreen.SetActive(false);        
         currentScreen = _newActiveScreen;
+        currentScreen.SetActive(true);
         traveledScreens.Add(currentScreen);
         travelScreenID++;
-        Debug.Log(currentScreen.name);
 	}
 
 	public void NavigateToPreviousScreen()
@@ -91,10 +89,7 @@ public class NavigationController : MonoBehaviour
             traveledScreens.Remove(currentScreen);
             travelScreenID--;
             traveledScreens[travelScreenID].SetActive(true);
-            currentScreen = traveledScreens[travelScreenID];
-        }       
-
-        
-
+            currentScreen = traveledScreens[travelScreenID];          
+        } 
 	}
 }

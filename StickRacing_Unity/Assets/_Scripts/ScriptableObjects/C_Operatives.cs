@@ -17,7 +17,14 @@ public class C_Operatives : ScriptableObject
     [SerializeField] private float boosterChance;
 
     [HideInInspector] public List<float> inventoryChances = new List<float>();
-    public Dictionary<int, string> inventory = new Dictionary<int, string>();    
+
+    [Header("Credit Quantity Chances - Must Add up to 100")]
+    public float[] creditQuantityChances = new float[3];
+    public int[] creditQuantities = new int [3];
+    
+
+    public Dictionary<int, string> inventory = new Dictionary<int, string>();
+        
      
     public void AddValuesToList()
     {

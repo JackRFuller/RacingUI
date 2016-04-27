@@ -63,4 +63,9 @@ public class MechanicPitController : MonoBehaviour {
             }
         }
 	}
+
+    public void InitiateUpgrade(int _upgradeCategory)
+    {
+
+    }
 }
